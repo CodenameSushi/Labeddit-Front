@@ -58,6 +58,10 @@ font-family: 'Noto Sans', sans-serif;
 font-weight: 700;
 font-size: 1.125rem;
 
+:hover{
+    cursor: pointer;
+}
+
 
 `
 export const ButtonLogin = styled.button`

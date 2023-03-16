@@ -1,14 +1,17 @@
+import { useNavigate } from 'react-router-dom'
 import Logo from  '../../assets/Logo-small.svg'
 import { ButtonLogin, Header, InputStyled, MainScreen } from '../../GlobalStyle'
+import { goToFeed, goToLogin } from '../../routes/coordinator'
 import { H1Welcome, InputDiv, PrivacyCheck } from './Signup.styled'
 
 const Signup = () => {
+    const navigate = useNavigate()
     return (
         <MainScreen>
             <Header>
                 <div></div>
                 <img src={Logo} alt="logo"/>
-                <a>Entrar</a>
+                <a onClick={() => goToLogin(navigate)}>Entrar</a>
             </Header>
             <H1Welcome>
             <h1>Olá, boas vindas ao LabEddit ;)</h1>
@@ -31,7 +34,7 @@ const Signup = () => {
             </div>
             </PrivacyCheck>
 
-            <ButtonLogin>Cadastrar</ButtonLogin>
+            <ButtonLogin onClick={() => goToFeed(navigate)}>Cadastrar</ButtonLogin>
 
 
         </MainScreen>

@@ -3,8 +3,13 @@ import { InputDiv, LoginButtonDiv, LoginLogo, MainScreenLogin, } from './Login.s
 import Logo from '../../assets/Logo.svg'
 import Line from '../../assets/Line.svg'
 import { ButtonLogin, ButtonSignup, InputStyled } from '../../GlobalStyle'
+import { useNavigate } from 'react-router-dom'
+import { goToFeed, goToSignup } from '../../routes/coordinator'
 
 const Login = () => {
+  const navigate = useNavigate()
+
+
   return (
     <MainScreenLogin>
 
@@ -20,13 +25,13 @@ const Login = () => {
 
 
       <LoginButtonDiv>
-      <ButtonLogin>
+      <ButtonLogin onClick={() => goToFeed(navigate)}>
         Continuar
       </ButtonLogin>
 
       <img src={Line}/>
 
-      <ButtonSignup>
+      <ButtonSignup onClick={() => goToSignup(navigate)}> 
         Crie uma conta!
       </ButtonSignup>
 

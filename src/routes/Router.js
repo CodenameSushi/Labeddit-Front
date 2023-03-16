@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Feed from "../components/Feed/Feed"
-import Login from "../components/Login/Login"
-import Signup from "../components/Signup/Signup"
+import Feed from "../pages/Feed/Feed"
+import Login from "../pages/Login/Login"
+import Signup from "../pages/Signup/Signup"
 
 
 const Router = () => {
